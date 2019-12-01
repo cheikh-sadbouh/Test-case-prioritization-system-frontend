@@ -1,0 +1,55 @@
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Customize your testing options</div>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th><div class="md-checkbox" style="font-size:20px">
+        <input id="i12" type="checkbox" [(ngModel)]="user.branch"  (change)="change()">
+        <label for="i12">Branch coverage</label>
+      </div></th>
+      <th>
+        <div class="md-checkbox" style="font-size:20px">
+          <input id="i13" type="checkbox" [(ngModel)]="user.line" (change)="change()" >
+          <label for="i13">Line coverage</label>
+        </div>
+      </th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <div class="md-checkbox" style="font-size:20px">
+          <input id="i14" type="checkbox"  [(ngModel)]="user.instruction"  (change)="change()">
+          <label for="i14">Instruction coverage</label>
+        </div>
+
+      </td>
+      <td>
+        <div class="md-checkbox" style="font-size:20px">
+          <input id="i15" type="checkbox" [(ngModel)]="user.method"  (change)="change()" >
+          <label for="i15">Method coverage</label>
+        </div>
+
+      </td>
+
+    </tr>
+
+
+    </tbody>
+  </table>
+
+</div>
+<div class="col-md-12">
+  <div class="col-md-10 col-md-push-2"></div>
+  <div class="col-md-2">
+    <button (click)="submit()"  class="btn btn-primary btn-lg">  <i class="fa fa-paper-plane-o" aria-hidden="true"></i>  Submit</button>
+
+  </div>
+
+</div>

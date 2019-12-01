@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+      <a (click)="addFieldValue()"><i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+      </a>
+      Upload your test cases along with packages</div>
+
+    <table class="table table-hover table-responsive">
+      <thead>
+      <tr>
+        <th><i class="fa fa-file-archive-o" aria-hidden="true"></i>
+          Test Cases</th>
+        <th> <i class="fa fa-file-code-o" aria-hidden="true"></i>
+          Packages(source code) </th>
+        <th> <i class="fa fa-file-code-o" aria-hidden="true"></i>
+          Packages(Tests) </th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let field of fieldArray; let i = index">
+        <td>
+          <app-upload></app-upload>
+
+        </td>
+        <td>
+          <app-packages></app-packages>
+
+        </td>
+        <td>
+          <app-packages></app-packages>
+
+        </td>
+      </tr>
+
+
+      </tbody>
+    </table>
+
+  </div>
+  <app-checkbox></app-checkbox>
+  <br>
+
+</div>
