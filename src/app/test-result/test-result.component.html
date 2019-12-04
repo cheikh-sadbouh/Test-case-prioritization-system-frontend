@@ -1,5 +1,36 @@
 
 
-<div *ngFor="let data of restdata  | keyvalue">
-{{data.value}}
+<div class="container">
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Tests Results</div>
+
+  <table class="table table-hover table-responsive">
+    <thead>
+    <tr *ngFor="let key of Object.keys(restdata); let i = index">
+
+      <th *ngIf="i == 0"> <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+       FileName </th>
+
+      <th *ngFor="let ky of Object.keys(restdata[key])">
+        {{ky}} </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let key of Object.keys(restdata)">
+      <td>
+        {{key}}
+      </td>
+      <td  *ngFor="let ky of Object.keys(restdata[key])">
+        {{restdata[key][ky]}}
+      </td>
+
+    </tr>
+
+    </tbody>
+  </table>
+
 </div>
+</div>
+
